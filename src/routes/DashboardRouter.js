@@ -9,6 +9,8 @@ export const DashboardRouter = () => {
     return (
         <>
             <Navbar />
+            <div className='p-5'>
+
             <Routes>
                 <Route path='/' element={<h1></h1>} />
                 <Route path='/marvel' element={<MarvelScreen />} />
@@ -18,6 +20,7 @@ export const DashboardRouter = () => {
                 <Route path='/hero' element={<HeroScreen />} />
 
             </Routes>
+            </div>
         </>
     )
 }
