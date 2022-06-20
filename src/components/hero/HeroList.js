@@ -1,18 +1,18 @@
 import React from 'react'
 import { getHeroByPublisher } from '../../selector/getHeroByPublisher'
+import { HeroCard } from './HeroCard'
 
 export const HeroList = ({ publisher }) => {
     const heroes = getHeroByPublisher(publisher)
     return (
         <>
-            <h1>Hero list - {publisher}</h1>
-            <ul>
+            <div className='d-flex flex-wrap justify-content-between align-content-between'>
                 {
-                    heroes.map(hero => {
-                        return <li key={hero.id}>{hero.superhero}</li>
-                    })
+                    heroes.map(hero =>
+                        <HeroCard key={hero.id} {...hero} />
+                    )
                 }
-            </ul>
+            </div>
         </>
     )
 }
