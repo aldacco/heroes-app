@@ -40,9 +40,13 @@ export const SearchScreen = () => {
                     </form>
                 </div>
                 <div className='col-9'>
-                    <div className='row'>
+                    <div className='row row-cols-3'>
                         {
-                            herofitered.map(hero => <HeroCard key={hero.id} {...hero} />)
+                            herofitered.map(hero =>
+                                <div key={hero.id}>
+                                    <HeroCard  {...hero} />
+                                </div>
+                            )
                         }
                     </div>
                 </div>

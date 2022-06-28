@@ -5,7 +5,7 @@ export const HeroCard = (props) => {
     const { superhero, id, alter_ego } = props
     const imagePath = `../../assets/${id}.jpg`
     return (
-        <div className='d-flex border rounded m-2 p-0' style={{ width: 450, height: 250 }} >
+        <div className='d-flex border rounded shadow mb-5 bg-body ' style={{ width: 450, height: 250 }} >
             <img style={{ width: 150 }} src={imagePath} alt='hero' />
             <div className='p-4 w-75 d-flex flex-column justify-content-center'>
                 <h5>{superhero}</h5>

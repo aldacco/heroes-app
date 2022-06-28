@@ -3,6 +3,7 @@ import { DcScreen } from '../components/dc/DcScreen'
 import { HeroScreen } from '../components/hero/HeroScreen'
 import { MarvelScreen } from '../components/marvel/MarvelScreen'
 import { SearchScreen } from '../components/search/SearchScreen'
+import { Home } from '../components/ui/Home'
 import { Navbar } from '../components/ui/Navbar'
 
 export const DashboardRouter = () => {
@@ -12,7 +13,7 @@ export const DashboardRouter = () => {
             <div className='p-3'>
 
             <Routes>
-                <Route path='/' element={<h1>Home</h1>} />
+                <Route path='/' element={<Home />} />
                 <Route path='/marvel' element={<MarvelScreen />} />
                 <Route path='/dc' element={<DcScreen />} />
                 <Route path='/search' element={<SearchScreen />} />

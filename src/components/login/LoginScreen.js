@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom"
-import { useState } from "react"
 
 export const LoginScreen = () => {
     const navigate = useNavigate()

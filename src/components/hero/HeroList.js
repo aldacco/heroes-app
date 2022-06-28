@@ -6,10 +6,12 @@ export const HeroList = ({ publisher }) => {
     const heroes = getHeroByPublisher(publisher)
     return (
         <>
-            <div className='d-flex flex-wrap justify-content-between align-content-between'>
+            <div className='row row-cols-4'>
                 {
                     heroes.map(hero =>
-                        <HeroCard key={hero.id} {...hero} />
+                        <div className='col' key={hero.id}>
+                            <HeroCard {...hero} />
+                        </div>
                     )
                 }
             </div>
