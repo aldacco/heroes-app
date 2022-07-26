@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 import { getHeroById } from '../../selector/getHeroById'
 export const HeroScreen = () => {
     const { heroId } = useParams()
@@ -16,6 +16,12 @@ export const HeroScreen = () => {
                 <p><b>Alter ego: </b> {hero.alter_ego}</p>
                 <p><b>Characters: </b> {hero.characters}</p>
                 <p><b>First appearance: </b> {hero.first_appearance}</p>
+
+                <NavLink to={hero.publisher == 'Marvel Comics' ? '/marvel' : '/dc'}>
+                    <button className='btn btn-primary'>
+                        Regresar
+                    </button>
+                </NavLink>
             </div>
         </div>
     )

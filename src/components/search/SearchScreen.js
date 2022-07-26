@@ -39,17 +39,25 @@ export const SearchScreen = () => {
                         </div>
                     </form>
                 </div>
+
                 <div className='col-9'>
-                    <div className='row row-cols-3'>
-                        {
-                            herofitered.map(hero =>
-                                <div key={hero.id}>
-                                    <HeroCard  {...hero} />
-                                </div>
-                            )
-                        }
-                    </div>
+                    {
+                        (herofitered.length > 0)
+                            ?
+                            <div className='row row-cols-3'>
+                                {
+                                    herofitered.map(hero =>
+                                        <div key={hero.id}>
+                                            <HeroCard  {...hero} />
+                                        </div>
+                                    )
+                                }
+                            </div>
+
+                            : <div className='alert alert-danger'>No encontro coincidencias</div>
+                    }
                 </div>
+
             </div>
         </div>
     )
