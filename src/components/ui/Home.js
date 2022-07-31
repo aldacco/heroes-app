@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
+import { AuthContext } from '../../auth'
 
 export const Home = () => {
+    const { user } = useContext(AuthContext)
+    console.log(user?.name)
     return (
         <div className='d-flex'>
             <div className="card w-25">
