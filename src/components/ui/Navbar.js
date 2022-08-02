@@ -5,6 +5,7 @@ import { AuthContext } from '../../auth';
 
 export const Navbar = () => {
     const { user, logout } = useContext(AuthContext)
+    console.log({ user })
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
             <Link
@@ -43,7 +44,7 @@ export const Navbar = () => {
                 <ul className="navbar-nav ml-auto">
                     <li >
                         <p className='text-primary'>
-                            {user?.name}
+                            {user.name}
                         </p>
                     </li>
                     <li>
